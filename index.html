@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>💥Boom Number Game💥</title>
+  </head>
+  <body>
+    <main class="main">
+      <h2 class="title">Boom Number Game</h2>
+      <div class="line"></div>
+      <p class="text">Input Any Number (1-20):</p>
+
+      <!-- Guessing number input -->
+      <input type="number" id="guess" min="1" max="20" />
+      <button onclick="checkGuess()">Check</button>
+      <p id="result"></p>
+
+      <div class="line"></div>
+
+      <!-- Boom number input -->
+      <p class="text">Do you find "The Boom Number"?</p>
+      <p class="text check">Check here:</p>
+      <input type="number" id="finalGuess" min="1" max="20" />
+      <button onclick="checkFinal()">Check</button>
+      <p id="finalResult"></p>
+      <div class="line"></div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
