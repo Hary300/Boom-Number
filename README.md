@@ -9,9 +9,11 @@ https://excalidraw.com/#json=_GfA7iYbHfFJvtEKORJUm,OZaGoJAXVDavj_nfFm5vdg
 ## Preview
 
 - Desktop 1440px
+
   ![Product preview card preview Desktop](./images/Screenshot-Desktop.png)
 
 - Mobile 375px
+
   ![Product preview card preview Mobile](./images/Screenshot-Mobile.png)
 
 ## Live Site URL:
