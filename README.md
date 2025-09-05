@@ -1,3 +1,7 @@
+## Enter the game👇🏻
+
+[💥Boom Number Game💥](https://hary300.github.io/Boom-Number/)
+
 ## Workflow Link (Excalidraw)
 
 https://excalidraw.com/#json=_GfA7iYbHfFJvtEKORJUm,OZaGoJAXVDavj_nfFm5vdg
@@ -15,7 +19,3 @@ https://excalidraw.com/#json=_GfA7iYbHfFJvtEKORJUm,OZaGoJAXVDavj_nfFm5vdg
 - Mobile 375px
 
   ![Product preview card preview Mobile](./images/Screenshot-Mobile.png)
-
-## Live Site URL:
-
-[💥Boom Number Game💥](https://hary300.github.io/Boom-Number/)
