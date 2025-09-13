@@ -32,6 +32,10 @@ function checkFinal() {
     console.log('Boom baru:', boom);
   } else {
     document.getElementById('finalResult').textContent =
-      '❌ Wrong!! try again!';
+      "💥 BOOM! You're dead! The Boom Number: " + boom;
+
+    // reset game
+    boom = Math.floor(Math.random() * 100) + 1;
+    console.log('New boom number:', boom);
   }
 }
