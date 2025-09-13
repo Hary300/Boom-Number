@@ -1,12 +1,28 @@
 'use strict';
 
 // Define the boom number
-let boom = Math.floor(Math.random() * 20) + 1;
+let boom = Math.floor(Math.random() * 100) + 1;
 console.log('Boom number:', boom); // visible in console
+let count = 10;
 
 function checkGuess() {
-  let userGuess = parseInt(document.getElementById('guess').value);
+  if (count > 0) {
+    count--; // kurangi 1
+  } else {
+    count = 10; // reset ke 10 kalau sudah 0
+  }
+  document.getElementById('score').innerText = count;
 
+  if (count === 0) {
+    document.getElementById('result').textContent =
+      "💥 BOOM! You're dead! The Boom Number: " + boom;
+
+    boom = Math.floor(Math.random() * 100) + 1;
+    console.log('New boom number:', boom);
+    return;
+  }
+
+  let userGuess = parseInt(document.getElementById('guess').value);
   if (userGuess < boom) {
     document.getElementById('result').textContent = '⬆️ Going up';
   } else if (userGuess > boom) {
@@ -16,7 +32,7 @@ function checkGuess() {
       "💥 BOOM! You're dead! The Boom Number: " + boom;
 
     // reset game
-    boom = Math.floor(Math.random() * 20) + 1;
+    boom = Math.floor(Math.random() * 100) + 1;
     console.log('New boom number:', boom);
   }
 }
@@ -28,14 +44,14 @@ function checkFinal() {
     document.getElementById('finalResult').textContent =
       '✅ Awesome, You just saved the world!';
     // reset game
-    boom = Math.floor(Math.random() * 20) + 1;
+    boom = Math.floor(Math.random() * 100) + 1;
     console.log('Boom baru:', boom);
   } else {
     document.getElementById('finalResult').textContent =
       "💥 BOOM! You're dead! The Boom Number: " + boom;
 
     // reset game
-    boom = Math.floor(Math.random() * 20) + 1;
+    boom = Math.floor(Math.random() * 100) + 1;
     console.log('New boom number:', boom);
   }
 }
