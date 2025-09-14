@@ -21,7 +21,10 @@
 
       <!-- Guessing number input -->
       <input type="number" id="guess" min="1" max="20" />
-      <button onclick="checkGuess()">Check</button>
+      <div class="">
+        <button onclick="checkGuess()" id="checkBtn">Check</button>
+        <button onclick="reset()">Reset</button>
+      </div>
       <p class="text">🏁your score:🏁</p>
       <span id="score" class="text">10</span>
       <p id="result"></p>
@@ -32,7 +35,8 @@
       <p class="text">Do you find "The Boom Number"?</p>
       <p class="text check">Check here:</p>
       <input type="number" id="finalGuess" min="1" max="20" />
-      <button onclick="checkFinal()">Check</button>
+
+      <button onclick="checkFinal()" id="checkFinalBtn">Check</button>
       <p id="finalResult"></p>
       <div class="line"></div>
     </main>

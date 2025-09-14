@@ -16,6 +16,8 @@ function checkGuess() {
   if (count === 0) {
     document.getElementById('result').textContent =
       "💥 BOOM! You're dead! The Boom Number: " + boom;
+    document.getElementsById('checkBtn').disabled = true;
+    document.getElementsById('checkFinalBtn').disabled = true;
 
     boom = Math.floor(Math.random() * 100) + 1;
     console.log('New boom number:', boom);
@@ -30,11 +32,23 @@ function checkGuess() {
   } else {
     document.getElementById('result').textContent =
       "💥 BOOM! You're dead! The Boom Number: " + boom;
-
+    document.getElementById('score').innerText = '💀';
+    document.getElementsById('checkBtn').disabled = true;
+    document.getElementsById('checkFinalBtn').disabled = true;
     // reset game
     boom = Math.floor(Math.random() * 100) + 1;
     console.log('New boom number:', boom);
   }
+}
+
+function reset() {
+  count = 10;
+  boom = Math.floor(Math.random() * 100) + 1;
+  document.getElementById('score').innerText = count;
+  document.getElementById('result').textContent = '';
+  document.getElementById('finalResult').textContent = '';
+  document.getElementsById('checkBtn').disabled = false;
+  document.getElementsById('checkFinalBtn').disabled = false;
 }
 
 function checkFinal() {
@@ -49,7 +63,9 @@ function checkFinal() {
   } else {
     document.getElementById('finalResult').textContent =
       "💥 BOOM! You're dead! The Boom Number: " + boom;
-
+    document.getElementById('score').innerText = '💀';
+    document.getElementsById('checkBtn').disabled = true;
+    document.getElementsById('checkFinalBtn').disabled = true;
     // reset game
     boom = Math.floor(Math.random() * 100) + 1;
     console.log('New boom number:', boom);
