@@ -57,6 +57,8 @@ function checkFinal() {
   if (userFinal === boom) {
     document.getElementById('finalResult').textContent =
       '✅ Awesome, You just saved the world!';
+    document.getElementsById('checkBtn').disabled = true;
+    document.getElementsById('checkFinalBtn').disabled = true;
     // reset game
     boom = Math.floor(Math.random() * 100) + 1;
     console.log('Boom baru:', boom);
